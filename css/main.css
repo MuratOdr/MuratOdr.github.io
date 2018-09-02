@@ -1,0 +1,335 @@
+/*----------------------------------------------------------------------------*\
+  # Mise en page basique
+\*----------------------------------------------------------------------------*/
+
+html
+{
+  font-size: 75%; /* 1Rem = 10px = 0.625em */
+}
+
+body, p, a, ul, h1
+{
+  margin: 0;
+  padding: 0;
+}
+
+a
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix:after
+{
+  content:"";
+  display: table;
+  clear: both;
+}
+
+/*--
+  # Positionnement de la page
+--------------------------------------*/
+
+.l-page
+{
+  margin: 0;
+  padding: 0;
+
+  background-color: #FFF8F0;
+}
+
+.l-content
+{
+  width: 100vw;
+
+  min-height: 100vh;
+
+  background-color: #211F1B;
+  background-image: url(../img/Header.png); /* 1of4 */
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/*--
+  # Contenu Principal
+--------------------------------------*/
+
+.l-content--centerlay
+{
+  text-align: center;
+}
+
+.c-content
+{
+  margin: 0;
+  padding: 0;
+}
+
+.c-content__author
+{
+  padding: 5rem 0;
+}
+
+.c-content__author p
+{
+  font-size: 1.6rem;
+  font-weight: lighter;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  color: #242424;
+}
+
+.c-content__author img
+{
+  margin: 0 0.5rem;
+
+  width: 20px;
+  height: 18px;
+  vertical-align: middle;
+
+  -webkit-animation: beating 0.5s infinite alternate;
+
+          animation: beating 0.5s infinite alternate;
+  -webkit-transition: all ease-in-out;
+  transition: all ease-in-out;
+}
+
+@-webkit-keyframes beating
+{
+	to { -webkit-transform: scale(1.25); transform: scale(1.25); }
+}
+
+@keyframes beating
+{
+	to { -webkit-transform: scale(1.25); transform: scale(1.25); }
+}
+
+.c-content__logo img
+{
+  width: 140px;
+  height: 104px;
+}
+
+.c-content__title
+{
+  margin: 1.6rem;
+}
+
+.c-title
+{
+  font-weight: lighter;
+  font-family: 'Flamenco', cursive;
+}
+
+.c-title--name
+{
+  margin-bottom: 1rem;
+
+  font-size: 4.8rem;
+  color: #242424;
+}
+
+.c-title--desc
+{
+  font-size: 2.4rem;
+  color: #242424;
+}
+
+@media all and (min-width: 48em)
+{
+  .l-content--centerlay
+  {
+    vertical-align: middle;
+
+  }
+}
+
+@media all and (min-width: 90em)
+{
+  .l-content--centerlay
+  {
+    float: none;
+    width: 100vw;
+  }
+}
+
+/*--
+  # Timer
+--------------------------------------*/
+
+.l-timer
+{
+  margin: 0;
+  padding: 5rem 0 6rem;
+}
+
+#c-content__timer
+{
+  font-weight: lighter;
+  font-family: 'Flamenco', cursive;
+  font-size: 3.6rem;
+
+	color: #FFF8F0;
+}
+
+.c-timer
+{
+  margin: 0;
+  padding: 0;
+}
+
+.c-timer--color
+{
+  color: #CD9B55;
+}
+
+.c-timer--separator
+{
+  margin: 2.5rem 0;
+}
+
+@media all and (min-width: 48em)
+{
+
+  .c-timer--separator
+  {
+    display: inline-block;
+    margin: 0 2.25%;
+  }
+
+  .c-timer
+  {
+    display: inline-block;
+  }
+
+}
+
+/*--
+  # Contact
+--------------------------------------*/
+
+.l-contact
+{
+  margin: 0;
+  padding: 0;
+}
+
+.c-contact--info
+{
+  margin: 0;
+  padding: 0;
+
+  font-weight: lighter;
+  font-family: 'Flamenco', cursive;
+  font-size: 2.4rem;
+
+	color: #CD9B55;
+}
+
+.c-contact--info img
+{
+  margin: 0 1.6rem;
+
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.c-contact--mail
+{
+  margin: 1.6rem;
+  padding: 0;
+
+  font-weight: lighter;
+  font-family: 'Flamenco', cursive;
+  font-size: 2.4rem;
+
+  color: #FFF8F0;
+
+  -webkit-transition: all 0.5s ease-in-out;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.c-contact--mail:hover
+{
+  color: #CD9B55;
+}
+
+.c-contact--mail:hover + .c-contact--info
+{
+  color: #FFF8F0;
+}
+
+/*--
+  # Social
+--------------------------------------*/
+
+.l-social
+{
+  margin: 5rem 0;
+  padding: 0;
+}
+
+.c-social--iconlist
+{
+  list-style: none;
+}
+
+.c-iconlist--item
+{
+  margin: 0 0.5rem;
+  padding: 0;
+
+  display: inline-block;
+}
+
+.c-iconlist--item > a
+{
+  width: 41px;
+  height: 41px;
+
+  display: inline-block;
+  background-image: url('../img/IconSocial.svg');
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  opacity: 1;
+
+  -webkit-transition: all 0.25s ease-in-out;
+
+  transition: all 0.25s ease-in-out;
+}
+
+.c-social--iconlist a:hover
+{
+  opacity: 0.5;
+}
+
+.c-iconlist--item--facebook > a
+{
+  background-position: 0 0;
+}
+
+.c-iconlist--item--twitter > a
+{
+  background-position: -54px 0;
+}
+
+.c-iconlist--item--instagram > a
+{
+  background-position: -108px 0;
+}
+
+.c-iconlist--item--youtube > a
+{
+  background-position: -162px 0;
+}
+
+@media all and (min-width: 48em)
+{
+  .c-iconlist--item > a
+  {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+}
